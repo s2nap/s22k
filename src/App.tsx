@@ -1,6 +1,5 @@
 import LogoImg from './assets/yungsnap.png'
 import ytIcon from './assets/icons/youtube.svg'
-import ytgIcon from './assets/icons/youtubegaming.svg'
 import ttIcon from './assets/icons/tiktok.svg'
 import igIcon from './assets/icons/instagram.svg'
 import './App.css'
