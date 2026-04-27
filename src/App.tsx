@@ -1,36 +1,47 @@
 import LogoImg from './assets/yungsnap.png'
+import ytIcon from './assets/icons/youtube.svg'
+import ytgIcon from './assets/icons/youtubegaming.svg'
+import ttIcon from './assets/icons/tiktok.svg'
+import igIcon from './assets/icons/instagram.svg'
 import './App.css'
 
 const links = [
-  { name: 'YouTube', user: '@yungsnap', url: 'https://www.youtube.com/@yungsnap' },
-  { name: 'YouTube', user: '@ss2nap', url: 'https://www.youtube.com/@ss2nap' },
-  { name: 'TikTok', user: '@ss2nap', url: 'https://www.tiktok.com/@ss2nap' },
-  { name: 'Instagram', user: '@ss2nap', url: 'https://www.instagram.com/ss2nap' },
+  { icon: ytIcon, user: '@yungsnap', url: 'https://www.youtube.com/@yungsnap' },
+  { icon: ytIcon, user: '@ss2nap', url: 'https://www.youtube.com/@ss2nap' },
+  { icon: ttIcon, user: '@ss2nap', url: 'https://www.tiktok.com/@ss2nap' },
+  { icon: igIcon, user: '@ss2nap', url: 'https://www.instagram.com/ss2nap' },
 ]
 
 export default function App() {
   return (
-    <>
-      {/* LOGO */}
-      <section id="center">
-        <img src={LogoImg} className="base" alt="logo" />
-      </section>
+    <main className="wrapper">
+      
+      <div className="card">
+  
+        {/* LOGO */}
+        <section id="center">
+          <img src={LogoImg} className="base" alt="logo" />
+        </section>
 
-      {/* LINKS */}
-      <section id="next-steps">
-        <h2>Social Media</h2>
+        {/* LINKS */}
+        <section id="next-steps">
+          <h2>🧟</h2>
 
         <ul className="links">
           {links.map((link, i) => (
-            <li key={i}>
-              <a href={link.url} target="_blank" rel="noopener noreferrer">
-                <span>{link.name}</span>
-                <small>{link.user}</small>
-              </a>
-            </li>
-          ))}
-        </ul>
+          <li key={i}>
+            <a href={link.url} target="_blank" rel="noopener noreferrer">
+            <img src={link.icon} className="icon" />
+            <small>{link.user}</small>
+            </a>
+        </li>
+
+        
+      ))}
+       </ul>
       </section>
-    </>
+    </div>
+      
+    </main>
   )
 }

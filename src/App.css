@@ -1,22 +1,55 @@
-/* CONTENEDOR LOGO */
-#center {
-  min-height: 70vh;
+/* FONDO GENERAL */
+.wrapper {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+}
+
+/* 🧊 CARD GLASS NEGRO */
+.card {
+  width: 100%;
+  max-width: 900px;
+
+  /* glass oscuro */
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border-radius: 25px;
+  padding: 30px 20px;
+
+  /* borde glass */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  /* sombra pro */
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* LOGO */
+#center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .base {
-  max-width: 500px;
+  max-width: 400px;
   width: 100%;
   height: auto;
 }
 
-/* LISTA DE LINKS */
+/* LINKS */
+#next-steps {
+  text-align: center;
+}
+
 .links {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  margin-top: 15px;
 
   display: flex;
   flex-wrap: wrap;
@@ -25,26 +58,40 @@
 }
 
 .links li {
-  flex: 1 1 180px; /* adaptable */
+  flex: 1 1 180px;
   max-width: 220px;
 }
 
+/* 🧊 BOTONES GLASS */
 .links a {
   display: flex;
   flex-direction: column;
-  padding: 22px;
-  border-radius: 10px;
+  align-items: center;      /* 🔥 centra horizontal */
+  justify-content: center;  /* 🔥 centra vertical */
+  padding: 25px;
+  border-radius: 14px;
   text-decoration: none;
 
-  background: #111;
+  /* glass oscuro */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
   color: white;
 
-  transition: 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: all 0.25s ease;
 }
 
+/* ✨ HOVER PRO */
 .links a:hover {
-  background: #222;
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+
+  background: rgba(255, 255, 255, 0.1);
+
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.05);
 }
 
 /* TEXTO */
@@ -52,7 +99,19 @@
   font-weight: bold;
 }
 
+/* TEXTO */
 .links small {
-  opacity: 0.7;
+  text-align: center;
   font-size: 12px;
+  opacity: 0.7;
+}
+/* ICONOS */
+.icon {
+  
+  width: 40px;
+  height: 40px;
+
+  filter: brightness(0) invert(1); /* 🔥 los vuelve blancos */
+
+  margin-bottom: 10px;
 }
