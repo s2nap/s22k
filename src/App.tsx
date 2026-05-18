@@ -24,7 +24,7 @@ export default function App() {
 
         {/* LINKS */}
         <section id="next-steps">
-          <h2>🧟</h2>
+          <h2>طَقْ</h2>
 
         <ul className="links">
           {links.map((link, i) => (
@@ -40,7 +40,17 @@ export default function App() {
        </ul>
       </section>
     </div>
-      
+      {/*<div className="card bottom-card">
+  <ul className="bottom-links">
+    {Array.from({ length: 3 }).map((_, i) => (
+      <li key={i}>
+        <a href="#">
+          Botón {i + 1}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>*/}
     </main>
   )
 }

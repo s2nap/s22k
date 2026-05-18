@@ -2,9 +2,11 @@
 .wrapper {
   min-height: 100vh;
   display: flex;
+  flex-direction: column; /* 🔥 CLAVE */
   justify-content: center;
   align-items: center;
   padding: 20px;
+  gap: 20px; /* espacio entre cards */
 }
 
 /* 🧊 CARD GLASS NEGRO */
@@ -114,4 +116,48 @@
   filter: brightness(0) invert(1); /* 🔥 los vuelve blancos */
 
   margin-bottom: 10px;
+}
+/* 🔻 CARD INFERIOR (RECTANGULAR LARGA) */
+.bottom-card {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* CONTENEDOR DE BOTONES */
+.bottom-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* CADA BOTÓN */
+.bottom-links li {
+  flex: 1;
+}
+
+/* ESTILO BOTONES */
+.bottom-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 12px;
+  border-radius: 10px;
+
+  text-decoration: none;
+  color: white;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: all 0.25s ease;
+}
+
+/* HOVER */
+.bottom-links a:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.1);
 }
