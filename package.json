@@ -1,9 +1,9 @@
 {
-  "name": "s2nap-page",
+  "name": "s22k",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://s2nap.github.io/s2nap-page",
+  "homepage": "https://s2nap.github.io/s22k/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
