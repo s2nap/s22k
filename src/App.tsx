@@ -6,7 +6,7 @@ import './App.css'
 
 const links = [
   { icon: ytIcon, user: '@yungsnap', url: 'https://www.youtube.com/@yungsnap' },
-  { icon: ytIcon, user: '@ss2nap', url: 'https://www.youtube.com/@ss2nap' },
+  { icon: ytIcon, user: '@s2nap', url: 'https://www.youtube.com/@s2nap' },
   { icon: ttIcon, user: '@ss2nap', url: 'https://www.tiktok.com/@ss2nap' },
   { icon: igIcon, user: '@ss2nap', url: 'https://www.instagram.com/ss2nap' },
 ]
