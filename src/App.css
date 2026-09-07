@@ -1,20 +1,18 @@
-/* FONDO GENERAL */
+
 .wrapper {
   min-height: 100vh;
   display: flex;
-  flex-direction: column; /* 🔥 CLAVE */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  gap: 20px; /* espacio entre cards */
+  gap: 20px; 
 }
 
-/* 🧊 CARD GLASS NEGRO */
 .card {
   width: 100%;
   max-width: 900px;
 
-  /* glass oscuro */
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
@@ -22,16 +20,13 @@
   border-radius: 25px;
   padding: 30px 20px;
 
-  /* borde glass */
   border: 1px solid rgba(255, 255, 255, 0.08);
 
-  /* sombra pro */
   box-shadow: 
     0 20px 60px rgba(0, 0, 0, 0.7),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-/* LOGO */
 #center {
   display: flex;
   justify-content: center;
@@ -44,7 +39,6 @@
   height: auto;
 }
 
-/* LINKS */
 #next-steps {
   text-align: center;
 }
@@ -64,17 +58,15 @@
   max-width: 220px;
 }
 
-/* 🧊 BOTONES GLASS */
 .links a {
   display: flex;
   flex-direction: column;
-  align-items: center;      /* 🔥 centra horizontal */
-  justify-content: center;  /* 🔥 centra vertical */
+  align-items: center;
+  justify-content: center;
   padding: 25px;
   border-radius: 14px;
   text-decoration: none;
 
-  /* glass oscuro */
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
 
@@ -85,7 +77,6 @@
   transition: all 0.25s ease;
 }
 
-/* ✨ HOVER PRO */
 .links a:hover {
   transform: translateY(-4px);
 
@@ -96,34 +87,31 @@
     0 0 10px rgba(255, 255, 255, 0.05);
 }
 
-/* TEXTO */
 .links span {
   font-weight: bold;
 }
 
-/* TEXTO */
 .links small {
   text-align: center;
   font-size: 12px;
   opacity: 0.7;
 }
-/* ICONOS */
+
 .icon {
   
   width: 40px;
   height: 40px;
 
-  filter: brightness(0) invert(1); /* 🔥 los vuelve blancos */
+  filter: brightness(0) invert(1);
 
   margin-bottom: 10px;
 }
-/* 🔻 CARD INFERIOR (RECTANGULAR LARGA) */
+
 .bottom-card {
   width: 100%;
   max-width: 900px;
 }
 
-/* CONTENEDOR DE BOTONES */
 .bottom-links {
   list-style: none;
   display: flex;
@@ -131,12 +119,10 @@
   gap: 10px;
 }
 
-/* CADA BOTÓN */
 .bottom-links li {
   flex: 1;
 }
 
-/* ESTILO BOTONES */
 .bottom-links a {
   display: flex;
   justify-content: center;
@@ -156,7 +142,6 @@
   transition: all 0.25s ease;
 }
 
-/* HOVER */
 .bottom-links a:hover {
   transform: translateY(-3px);
   background: rgba(255, 255, 255, 0.1);
