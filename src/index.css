@@ -1,11 +1,10 @@
-/* RESET */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* VARIABLES BASE */
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -20,7 +19,6 @@
   color: var(--text);
 }
 
-/* 🌙 MODO OSCURO */
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
@@ -28,28 +26,25 @@
     --border: #000000;
     --code-bg: #1f2028;
   }
-
-  /* 🎥 GIF DE FONDO */
-  body {
-    background: url('./assets/wall.gif') center/cover no-repeat fixed;
-  }
-
-  /* 🔥 OVERLAY + BLUR */
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-
-    backdrop-filter: blur(5px);           /* blur */
-    -webkit-backdrop-filter: blur(10px);   /* soporte safari */
-
-    background: rgba(20, 20, 20, 0.02);       /* oscurecer */
-
-    z-index: 0;
-  }
 }
 
-/* ⚠️ ASEGURA QUE EL CONTENIDO QUEDE ENCIMA */
+body {
+  background: url('./assets/wall.gif') center/cover no-repeat fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  background: rgba(20, 20, 20, 0.02);
+
+  z-index: 0;
+}
+
 #root,
 .wrapper,
 .card {
@@ -57,18 +52,15 @@
   z-index: 1;
 }
 
-/* BODY */
 body {
   margin: 0;
   font-family: var(--sans);
 }
 
-/* ROOT LIMPIO (sin bordes raros de Vite) */
 #root {
   min-height: 100vh;
 }
 
-/* HEADINGS */
 h1,
 h2 {
   font-weight: 500;
@@ -79,12 +71,10 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* TEXTO */
 p {
   margin: 0;
 }
 
-/* CODE (opcional, por si lo usas luego) */
 code {
   font-family: monospace;
   font-size: 14px;
