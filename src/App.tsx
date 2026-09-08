@@ -1,4 +1,5 @@
 import LogoImg from './assets/yungsnap.png'
+import SharkImg from './assets/shark.png'
 import ytIcon from './assets/icons/youtube.svg'
 import ttIcon from './assets/icons/tiktok.svg'
 import igIcon from './assets/icons/instagram.svg'
@@ -13,25 +14,41 @@ const links = [
 
 export default function App() {
   return (
-    <main className="wrapper">
-      <div className="card">
-        <section id="center">
-          <img src={LogoImg} className="base" alt="logo" />
-        </section>
-
-        <section id="next-steps">
-          <ul className="links">
-            {links.map((link, i) => (
-              <li key={i}>
-                <a href={link.url} target="_blank" rel="noopener noreferrer">
-                  <img src={link.icon} className="icon" alt="icon" />
-                  <small>{link.user}</small>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
+    <>
+      <div className="marquee-band" role="marquee" aria-label="decorative text">
+        <span>🧟 ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜 🧟 ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜 🧟 ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜 🧟 ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜 🧟</span>
       </div>
-    </main>
+
+      <img className="shark-decor" src={SharkImg} alt="" aria-hidden="true" />
+      
+      <main className="wrapper">
+        <div className="card">
+          <section id="center">
+            <img src={LogoImg} className="base" alt="logo" />
+          </section>
+
+          <section id="next-steps">
+            <ul className="links">
+              {links.map((link, i) => (
+                <li key={i}>
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    <img src={link.icon} className="icon" alt="icon" />
+                    <small>{link.user}</small>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
+
+
+        <div className="card">
+          <section id="center">
+          </section>
+        </div>
+
+
+      </main>
+    </>
   )
 }

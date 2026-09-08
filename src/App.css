@@ -1,3 +1,12 @@
+/* Definición de variables para el marquee */
+:root {
+  --grad-marquee: linear-gradient(90deg, #ff758c 0%, #ff7eb3 50%, #ff758c 100%);
+  --font-pixel: 'Courier New', Courier, monospace;
+  --color-marquee: #ffffff;
+  --glow-pink: #ff7eb3;
+  --t-shadow-light: 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,20 +19,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 40px 20px 20px 20px; /* Un poco más de padding arriba por el marquee */
   gap: 20px; 
 }
 
 .card {
   width: 100%;
   max-width: 900px;
-  
   background: rgba(0, 0, 0, 0.7);
-
   border-radius: 25px;
   padding: 30px 20px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-
   box-shadow: 
     0 20px 60px rgba(0, 0, 0, 0.7),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -68,8 +74,6 @@
   padding: 15px 10px;
   border-radius: 14px;
   text-decoration: none;
-
-  
   background: rgba(255, 255, 255, 0.08);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -95,4 +99,60 @@
   height: 32px;
   filter: brightness(0) invert(1);
   margin-bottom: 8px;
+}
+
+.shark-decor {
+  position: fixed;
+  left: 16px;
+  bottom: 12px;
+  z-index: 2;
+  width: clamp(110px, 18vw, 220px);
+  height: auto;
+  pointer-events: none;
+}
+
+
+.marquee-band {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: #000000;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 5px 0; 
+  font-family: var(--font-pixel);
+  font-size: 0.75rem; 
+  color: var(--color-marquee);
+  letter-spacing: 0.06em;
+  border-bottom: 2px solid var(--glow-black);
+  text-shadow: var(--t-shadow-light);
+}
+
+.marquee-band span {
+  display: inline-block;
+  animation: marquee-scroll 28s linear infinite;
+}
+
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
