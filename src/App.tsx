@@ -14,43 +14,24 @@ const links = [
 export default function App() {
   return (
     <main className="wrapper">
-      
       <div className="card">
-  
-        {/* LOGO */}
         <section id="center">
           <img src={LogoImg} className="base" alt="logo" />
         </section>
 
-        {/* LINKS */}
         <section id="next-steps">
-          <h2>طَقْ</h2>
-
-        <ul className="links">
-          {links.map((link, i) => (
-          <li key={i}>
-            <a href={link.url} target="_blank" rel="noopener noreferrer">
-            <img src={link.icon} className="icon" />
-            <small>{link.user}</small>
-            </a>
-        </li>
-
-        
-      ))}
-       </ul>
-      </section>
-    </div>
-      {/*<div className="card bottom-card">
-  <ul className="bottom-links">
-    {Array.from({ length: 3 }).map((_, i) => (
-      <li key={i}>
-        <a href="#">
-          Botón {i + 1}
-        </a>
-      </li>
-    ))}
-  </ul>
-</div>*/}
+          <ul className="links">
+            {links.map((link, i) => (
+              <li key={i}>
+                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                  <img src={link.icon} className="icon" alt="icon" />
+                  <small>{link.user}</small>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
     </main>
   )
 }
