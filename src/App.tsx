@@ -20,7 +20,7 @@ export default function App() {
       </div>
 
       <img className="shark-decor" src={SharkImg} alt="" aria-hidden="true" />
-      
+
       <main className="wrapper">
         <div className="card">
           <section id="center">
@@ -40,14 +40,6 @@ export default function App() {
             </ul>
           </section>
         </div>
-
-
-        <div className="card">
-          <section id="center">
-          </section>
-        </div>
-
-
       </main>
     </>
   )
