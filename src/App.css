@@ -1,10 +1,9 @@
-/* Definición de variables para el marquee */
+
 :root {
-  --grad-marquee: linear-gradient(90deg, #ff758c 0%, #ff7eb3 50%, #ff758c 100%);
-  --font-pixel: 'Courier New', Courier, monospace;
+  --grad-marquee: linear-gradient(90deg, #000000, #242424 48%, #000000);
+  --font-pixel: 'Trebuchet MS', 'Arial Rounded MT Bold', sans-serif;
   --color-marquee: #ffffff;
-  --glow-pink: #ff7eb3;
-  --t-shadow-light: 1px 1px 0px rgba(0, 0, 0, 0.3);
+  --t-shadow-light: 1px 1px 0 rgba(0, 0, 0, 0.55);
 }
 
 * {
@@ -19,20 +18,91 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px 20px 20px; /* Un poco más de padding arriba por el marquee */
-  gap: 20px; 
+  padding: 76px 20px 36px;
 }
 
 .card {
   width: 100%;
-  max-width: 900px;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 25px;
-  padding: 30px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 
-    0 20px 60px rgba(0, 0, 0, 0.7),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  max-width: 860px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #111111 0%, #000000 58%, #0b0b0b 100%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 34px;
+  padding: 38px 28px 30px;
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.42),
+    0 8px 18px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -14px 34px rgba(80, 80, 80, 0.12);
+  backdrop-filter: blur(20px) saturate(135%);
+  -webkit-backdrop-filter: blur(20px) saturate(135%);
+}
+
+.sections-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+  padding: 18px;
+}
+
+.content-section {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 22px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 22px;
+  background: linear-gradient(145deg, #1a1a1a, #030303);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 10px 20px rgba(0, 0, 0, 0.28);
+}
+
+.section-gif {
+  display: block;
+  width: clamp(100px, 55%, 170px);
+  height: auto;
+  image-rendering: pixelated;
+  filter: grayscale(1) drop-shadow(0 5px 4px rgba(0, 0, 0, 0.5));
+}
+
+.content-section::after {
+  content: '';
+  position: absolute;
+  top: -44px;
+  right: -28px;
+  width: 120px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  filter: blur(14px);
+}
+
+.content-section h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.15rem, 3vw, 1.55rem);
+  letter-spacing: 0.04em;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  left: 7%;
+  width: 70%;
+  height: 170px;
+  background: rgba(255, 255, 255, 0.11);
+  border-radius: 50%;
+  filter: blur(18px);
+  transform: rotate(-5deg);
+  pointer-events: none;
 }
 
 #center {
@@ -42,9 +112,12 @@
 }
 
 .base {
-  max-width: 400px;
+  position: relative;
+  z-index: 1;
+  max-width: 420px;
   width: 100%;
   height: auto;
+  filter: grayscale(1) drop-shadow(0 12px 10px rgba(0, 0, 0, 0.45));
 }
 
 #next-steps {
@@ -58,47 +131,74 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 14px;
 }
 
 .links li {
-  flex: 1 1 120px; 
-  max-width: 160px; 
+  flex: 1 1 140px;
+  max-width: 180px;
+}
+
+.links li:nth-child(2) .icon {
+  animation-delay: -0.7s;
+}
+
+.links li:nth-child(3) .icon {
+  animation-delay: -1.4s;
+}
+
+.links li:nth-child(4) .icon {
+  animation-delay: -2.1s;
 }
 
 .links a {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 15px 10px;
-  border-radius: 14px;
+  min-height: 108px;
+  padding: 16px 10px;
+  border-radius: 22px;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.08);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: all 0.25s ease;
+  background: linear-gradient(145deg, #171717, #030303);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.32);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .links a:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 
-    0 10px 30px rgba(0, 0, 0, 0.5),
-    0 0 10px rgba(255, 255, 255, 0.05);
+  transform: translateY(-6px) rotate(-1deg);
+  background: linear-gradient(145deg, #303030, #0a0a0a);
+  box-shadow: 0 16px 26px rgba(0, 0, 0, 0.7), 0 0 22px rgba(255, 255, 255, 0.2);
 }
 
 .links small {
   text-align: center;
-  font-size: 12px;
-  opacity: 0.8;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
 }
 
 .icon {
-  width: 32px;
-  height: 32px;
-  filter: brightness(0) invert(1);
-  margin-bottom: 8px;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 9px;
+  filter: brightness(0) invert(1) drop-shadow(0 3px 3px rgba(0, 0, 0, 0.55));
+  animation: logo-float 3.2s ease-in-out infinite;
+}
+
+@keyframes logo-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-4px) rotate(1deg);
+  }
 }
 
 .shark-decor {
@@ -107,6 +207,7 @@
   bottom: 1px;
   z-index: 2;
   width: clamp(110px, 18vw, 220px);
+  filter: grayscale(1) drop-shadow(5px 7px 2px rgba(0, 0, 0, 0.3));
   height: auto;
   pointer-events: none;
 }
@@ -118,15 +219,16 @@
   left: 0;
   width: 100%;
   z-index: 10;
-  background: #000000;
+  background: var(--grad-marquee);
   overflow: hidden;
   white-space: nowrap;
-  padding: 5px 0; 
+  padding: 7px 0;
   font-family: var(--font-pixel);
   font-size: 0.75rem; 
   color: var(--color-marquee);
   letter-spacing: 0.06em;
-  border-bottom: 2px solid var(--glow-black);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.62);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
   text-shadow: var(--t-shadow-light);
 }
 
@@ -154,5 +256,11 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 540px) {
+  .sections-card {
+    grid-template-columns: 1fr;
   }
 }

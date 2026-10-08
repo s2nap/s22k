@@ -16,7 +16,7 @@ export default function App() {
   return (
     <>
       <div className="marquee-band" role="marquee" aria-label="decorative text">
-        <span>🧟 ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜 🧟 ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜 🧟 ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜 🧟 ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜 🧟</span>
+        <span>ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜ピザ・モッツァレラ ピザ・モッツァレラ レラレラレラレラ レラレラレラ〜</span>
       </div>
 
       <img className="shark-decor" src={SharkImg} alt="" aria-hidden="true" />
@@ -40,7 +40,20 @@ export default function App() {
             </ul>
           </section>
         </div>
+
+        {/* <div className="card sections-card">
+          <section className="content-section" aria-labelledby="music-title">
+            <img src={SectionGif} className="section-gif" alt="" aria-hidden="true" />
+            <h2 id="music-title">Música</h2>
+          </section>
+
+          <section className="content-section" aria-labelledby="projects-title">
+            <img src={SectionGif} className="section-gif" alt="" aria-hidden="true" />
+            <h2 id="projects-title">Proyectos</h2>
+          </section>
+        </div> */}
       </main>
     </>
+    
   )
 }
